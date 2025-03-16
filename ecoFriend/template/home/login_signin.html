@@ -1,0 +1,35 @@
+{% extends "./home.html" %}
+{% block content %}
+
+<style>
+    
+</style>
+<div class="bg-dark vh-100 d-flex justify-content-center align-items-center">
+<div class="wrapper">
+    <form method="POST" class="mx-4">
+        {% csrf_token %}
+        <h2>Login</h2>
+        <div class="input-field">
+            <input type="text" name="email" placeholder="email" required>
+            <label hidden >Enter your email</label>
+        </div>
+        <div class="input-field">
+            <input type="password" name="password" placeholder="password" required>
+            <label hidden>Enter your password</label>
+        </div>
+        <div class="forget mb-4">
+            <label>
+                <input type="checkbox" name="remember">
+                Remember me
+            </label>
+            <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit">Log In</button>
+        <div class="register  mb-2 mt-4">
+            <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+    </form>
+</div>
+</div>
+
+{% endblock content %}
