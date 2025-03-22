@@ -1,0 +1,87 @@
+{% extends "./home.html" %}
+{% block content %}
+
+<!-- Bootstrap Styling for Responsiveness -->
+<style>
+    .dashboard-container {
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        height: 100vh;
+        background: #333;
+        color: white;
+        padding: 20px;
+    }
+
+    .main-content {
+        background-color: #066;
+        padding: 20px;
+        min-height: 100vh;
+    }
+
+    .graph, .table, .message {
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .graph {
+        height: 40vh;
+    }
+
+    .table {
+        height: 40vh;
+    }
+
+    .message {
+        height: 10vh;
+    }
+
+    /* Mobile Sidebar */
+    @media (max-width: 992px) {
+        .sidebar {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            padding: 10px;
+        }
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row dashboard-container">
+        <!-- Sidebar -->
+        <nav class="col-md-3 col-lg-2 d-md-block bg-dark text-white sidebar d-flex flex-column">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="#">Logout</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content py-3">
+            <div class="row">
+                <div class="col-12 col-md-6 mb-3 graph">
+                    <h4>Graph Section</h4>
+                </div>
+                <div class="col-12 col-md-6 mb-3 table">
+                    <h4>Table Section</h4>
+                </div>
+                <div class="col-12 message">
+                    <h4>Message Section</h4>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+{% endblock content %}
