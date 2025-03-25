@@ -7,7 +7,7 @@ _view_symbols = """
 """
 
 def home(request):
-  return render(request, 'home/home.html', {'title':'HOME | ECO-Friend'})
+    return render(request, 'home/home.html', {'title': 'HOME | ECO-Friend'})
 
 def login_signin_home(request):
 
@@ -64,3 +64,6 @@ def login_action(request):
 
   
   return render(request, 'home/login_signin.html', {'title':'Login-Signin | ECO-Friend'})
+
+def dashboard(request):  
+    return render(request, 'home/dashboard.html', {'title': 'Dashboard | ECO-Friend'})  # Ensure the template exists
