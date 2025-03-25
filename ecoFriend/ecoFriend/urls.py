@@ -7,5 +7,6 @@ from ecoFriend import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('login-signin/', views.login_signin_home, name="login_signin")
+    path('login-signin/', views.login_signin_home, name="login_signin"),
+    path('login/', views.login_action, name="login_action"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
